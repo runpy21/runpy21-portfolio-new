@@ -191,7 +191,6 @@ export const portfolio: PortfolioConfig = {
     {
       institution: 'Full Stack Open, University of Helsinki',
       period: '2026',
-      details: 'Participation listed; completion status not provided.',
     },
     {
       institution: 'Khmelnytskyi National University',
