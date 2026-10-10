@@ -1484,17 +1484,35 @@ textarea:focus-visible {
     top: 65px;
     right: 0;
     left: 0;
-    display: none;
+    display: flex;
     align-items: stretch;
+    flex-direction: column;
     gap: 18px;
-    padding: 16px 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
     border-bottom: 1px solid var(--line);
     background: #151611;
+    opacity: 0;
+    transform: translateY(-8px);
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      max-height 280ms ease,
+      padding 280ms ease,
+      opacity 180ms ease,
+      transform 220ms ease,
+      visibility 0s linear 280ms;
   }
 
   .nav-content.is-open {
-    display: flex;
-    flex-direction: column;
+    max-height: 80vh;
+    padding: 16px 20px 20px;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
   }
 
   .nav-links {
